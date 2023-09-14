@@ -1,3 +1,14 @@
+注：用Linux或Mac，编译
+./android.sh --help 可以查看编译文档
+编译步骤：
+1. 下载NDK，NDK版本在android/app/build.gradle中，目前是21.3.6528147
+2. 配置SDK、NDK路径：
+        export ANDROID_HOME=<Android SDK Path>（例：export ANDROID_HOME=D:/develop/Android/Sdk）
+        export ANDROID_NDK_ROOT=<Android NDK Path> （例：export ANDROID_NDK_ROOT=D:/develop/Android/Sdk/ndk/21.3.6528147）
+3. 执行：./android.sh（默认编译所有CPU架构）
+4. 如果要指定架构，同通过加参数编译生成.（例：./android.sh --disable-arm-v7a --disable-arm-v7a-neon --disable-x86 --disable-x86-64）
+5. 编译参数，通过./android.sh --help 查看.
+
 # MobileFFmpeg [![Financial Contributors on Open Collective](https://opencollective.com/mobile-ffmpeg/all/badge.svg?label=financial+contributors)](https://opencollective.com/mobile-ffmpeg) ![GitHub release](https://img.shields.io/badge/release-v4.4-blue.svg) ![Maven Central](https://img.shields.io/maven-central/v/com.arthenica/mobile-ffmpeg-min) ![CocoaPods](https://img.shields.io/badge/pod-v4.4-blue.svg) [![Build Status](https://travis-ci.org/tanersener/mobile-ffmpeg.svg?branch=master)](https://travis-ci.org/tanersener/mobile-ffmpeg)
 
 FFmpeg for Android, iOS and tvOS. 
